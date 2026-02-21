@@ -1,66 +1,187 @@
-# FleetFlow - Intelligent Fleet Management System
+# 🚚 FleetFlow Logistics Management System
 
-FleetFlow is a modern, responsive web application designed for real-time fleet operations, trip dispatching, and executive analytics.
+FleetFlow is a full-stack, real-time Fleet Management and Logistics Dashboard built to manage vehicles, drivers, trips, maintenance, fuel expenses, and operational analytics in a structured and scalable way.
 
-## Features
+Developed as part of Hackathon 2026 🚀
 
-- **Command Center**: Real-time dashboard with KPIs and operational health.
-- **Fleet Live Map**: Google Maps integration with status-based marker tracking.
-- **Trip Dispatcher**: Intelligent trip planning with auto-calculated freight charges.
-- **RBAC System**: Role-Based Access Control (Manager vs. Dispatcher).
-- **Maintenance & Expense Logs**: Complete tracking of vehicle health and operational costs.
-- **Executive Analytics**: Detailed financial and operational insights with Recharts.
+---
 
-## Tech Stack
+## 🔐 Role-Based Access Control (RBAC)
 
-- **Frontend**: React, Vite, Tailwind CSS
-- **Backend/DB**: Firebase Firestore
-- **Authentication**: Firebase Auth
-- **Maps**: Google Maps JS API
+FleetFlow supports two secure user roles:
 
-## Getting Started
+### 👑 Manager
+- Full system access
+- Add / Edit / Delete Vehicles
+- Create Dispatchers
+- Access Reports & Analytics
+- Manage Settings
+- Financial Monitoring (ROI, Revenue, Costs)
 
-### Prerequisites
+### 🚛 Dispatcher
+- Create & Manage Trips
+- Assign Vehicles & Drivers
+- Update Trip Status
+- Limited access (No Settings / Reports)
 
-- Node.js installed
-- Git installed (for version control)
+Authentication powered by Firebase Auth.
 
-### Installation
+---
 
-1. Clone the repository:
+## 🚗 Core Modules
 
-   ```bash
-   git clone https://github.com/Vatsal2007/FleetFlow.git
-   cd FleetFlow
-   ```
+### 1️⃣ Dashboard (Command Center)
+- Active Fleet Overview
+- Pending Cargo
+- Completed Trips
+- Maintenance Alerts
+- Revenue & Cost Summary
+- Live Fleet Map (Google Maps Integration)
+- Real-time Firestore updates
 
-2. Install dependencies:
+---
 
-   ```bash
-   npm install
-   ```
+### 2️⃣ Vehicle Management
+- Add / Manage Vehicles
+- Capacity Tracking
+- Region Assignment
+- Status Control (Available / In Shop)
 
-3. Set up environment variables:
+---
 
-   - Create a `.env` file in the root directory.
-   - Use `src/.env.example` as a template.
-   - Add your Firebase and Google Maps API keys.
+### 3️⃣ Driver Management
+- Driver Profiles
+- License Expiry Tracking
+- Category-Based Assignment
+- Status: On Duty / Off Duty / Suspended
 
-4. Run the development server:
-   ```bash
-   npm run dev
-   ```
+---
 
-## Environment Variables
+### 4️⃣ Trip Dispatcher
+- Create Trips
+- Vehicle & Driver Selection
+- Validation (No Overload Rule)
+- Trip Lifecycle:
+  Draft → Dispatched → Completed → Cancelled
+- Freight Revenue Tracking
 
-| Variable                    | Description                  |
-| --------------------------- | ---------------------------- |
-| `VITE_GOOGLE_MAPS_API_KEY`  | Google Maps Platform API Key |
-| `VITE_FIREBASE_API_KEY`     | Firebase Web API Key         |
-| `VITE_FIREBASE_AUTH_DOMAIN` | Firebase Auth Domain         |
-| `VITE_FIREBASE_PROJECT_ID`  | Project ID                   |
-| ...                         | Other Firebase config values |
+---
 
-## License
+### 5️⃣ Maintenance & Service Logs
+- Preventive Maintenance
+- Auto Vehicle Status Update (In Shop)
+- Service Cost Tracking
 
-MIT
+---
+
+### 6️⃣ Fuel & Expense Logging
+- Fuel Entry (Liters & Cost)
+- Maintenance Cost Tracking
+- Automatic Operational Cost Calculation
+
+---
+
+### 7️⃣ Analytics & Reports
+- Revenue Tracking
+- Vehicle ROI Calculation:
+  
+  ROI = (Revenue - (Fuel + Maintenance)) / Acquisition Cost
+
+- Performance Charts
+- Operational Metrics
+- Export Ready Data Structure
+
+---
+
+## 🗺️ Live Fleet Map
+
+- Google Maps Integration
+- Rajkot-based dynamic vehicle positioning
+- Status-based marker colors
+- Fullscreen Support
+- Real-time vehicle visualization
+
+---
+
+## 💰 Financial Intelligence
+
+FleetFlow automatically calculates:
+
+- Total Revenue (Completed Trips)
+- Total Operational Cost
+- Fuel Expenses
+- Maintenance Costs
+- Vehicle ROI
+- Fleet Efficiency Metrics
+
+---
+
+## 🛠️ Tech Stack
+
+Frontend:
+- React (Vite)
+- Tailwind CSS
+- Recharts (Analytics)
+- @react-google-maps/api
+
+Backend / Database:
+- Firebase Firestore
+- Firebase Authentication
+
+Deployment:
+- GitHub
+- Firebase Hosting / Vercel
+
+---
+
+## ⚙️ System Architecture
+
+- Real-time Firestore listeners (onSnapshot)
+- Role-based protected routes
+- Secure access validation
+- Modular component-based structure
+- Scalable SaaS-ready layout
+
+---
+
+## 🔒 Security
+
+- Firebase Authentication
+- Role validation after login
+- Protected routes
+- Restricted UI rendering
+- Firestore rule-based access
+
+---
+
+## 🚀 Future Enhancements
+
+- Live GPS Tracking
+- Route Optimization
+- Multi-Branch Support
+- Advanced Revenue Models
+- Driver Scoring AI
+- Fleet Performance AI Predictions
+
+---
+
+## 👨‍💻 Developer
+
+Developed by:
+Vatsal Panchasara
+
+Hackathon Project – 2026
+
+---
+
+## 📌 Project Status
+
+✔ Fully Functional  
+✔ Real-Time Updates  
+✔ Enterprise-Ready UI  
+✔ Role-Based Access Control  
+✔ Financial & Operational Tracking  
+
+---
+
+# ⭐ FleetFlow – Smart Logistics. Smarter Decisions.
